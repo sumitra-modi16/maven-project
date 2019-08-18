@@ -14,6 +14,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo "This is Build Stage"
+                sh label: '', script: 'mvn clean package checkstyle:checkstyle'
             }
         }
 
